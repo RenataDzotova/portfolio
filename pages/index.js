@@ -1,9 +1,16 @@
 import Head from 'next/head'
-import Image from 'next/image'
+// import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import NavBar from '@/comps/navbar'
+import { FlexBox, Image, Text } from '@/styles/globals'
+import Card from '@/comps/card'
+import { motion, useAnimation } from 'framer-motion'; 
+import Typewriter from 'typewriter-effect';
+
 
 const inter = Inter({ subsets: ['latin'] })
+
 
 export default function Home() {
   return (
@@ -14,110 +21,88 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.js</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
+
+      <FlexBox className='mainCont' dir="column" linearGradient="linear-gradient(180deg, #717ADD 0%, rgba(113, 122, 221, 0.13) 100%)" zIndex="-100">
+
+        <NavBar></NavBar>
+
+        <motion.div initial={{position:'absolute', top:'0', left:"15vw"}} animate={{rotate: [-20, 20, -20]}} transition={{duration:'4', repeat: Infinity}}><Image src='/guys.svg' width="120px" position="absolute" top="-4vh" left="20%" opacity='50%' zIndex='-100'></Image></motion.div>
+
+        <motion.div initial={{position:'absolute', y: -900, x: 1400, rotate:0}} animate={{y: -1200, x:-1500, rotate:30}} transition={{duration:'6', ease:'linear', delay:3}}>
+          <Image src='/bird.svg' width="50px" zIndex='-200'></Image>
+        </motion.div>
+
+        <motion.div initial={{position:'absolute', y: -500, x: -1500, rotate:30}} animate={{y: -200, x:1400, rotate:50}} transition={{duration:'6', ease:'linear', delay:6}}>
+          <Image src='/bird2.svg' width="80px" zIndex='-200'></Image>
+        </motion.div>
+
+        <FlexBox className='landing' dir="column" height="100vh" width="100vw" zIndex='0'>
+            <FlexBox dir="column" color="white" margin="25vh 0 0 0">
+              <Text fontSize="80px" fontFamily="Pompiere" textAlign="center">Renata Dzotova</Text>
+              <Text fontSize="36px" fontFamily="PT Sans Narrow" textAlign="center">UX/UI designer</Text>
+            </FlexBox>
+
+            <FlexBox dir="column" color="white" fontSize="22px" margin="35vh 0 0 0" fontFamily="PT Sans" textAlign='center'>
+              {/* <Text textAlign="center">A problem solver with design sensibility and sky-high standards.</Text> */}
+              
+              <Typewriter
+                onInit={(typewriter) => {
+                typewriter.pasteString('A problem solver with design sensibility')
+                typewriter.typeString(' and high')
+                .callFunction(() => {
+                  console.log('String typed out!');
+                })
+                .pauseFor(1500)
+                .deleteChars(4)
+                .callFunction(() => {
+                  console.log('All strings were deleted');
+                })
+                .start();
+                typewriter.typeString(' sky-high standards.')
+                }}
+
               />
-            </a>
-          </div>
-        </div>
+              <Text textAlign="center">I can find a creative solution to any challenge. </Text>
+            </FlexBox>
+        </FlexBox>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
-          </div>
-        </div>
+        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 200, damping: 10 }} initial={{ y: 300}} whileInView={{ y: 0}} viewport={{ once: true, amount: 0.1 }}>
+          <Card 
+          img="/rooty.jpg"
+          name="Rooty"
+          role="UI/UX design & Font-end Development"
+          description="A freelance mobile marketplace allowing BCIT students to offer their interdisciplinary skillset to each other.">
+          </Card>
+        </motion.div>
 
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
+        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 200, damping: 10 }} initial={{ y: 300}} whileInView={{ y: 0}} viewport={{ once: true, amount: 0.2 }}>
+          <Card 
+          img="/westp.jpg"
+          name="West Point Hotel"
+          role="UI/UX design"
+          description="A website for an imaginary luxury Caribbean resort West Point Hotel.">
+          </Card>
+        </motion.div>
 
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
+        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 200, damping: 10 }} initial={{ y: 300}} whileInView={{ y: 0}} viewport={{ once: true, amount: 0.2 }}>
+        <Card 
+        img="/drinkupp.jpg"
+        name="DrinkUp"
+        role="UI/UX design & Font-end Development"
+        description="Have you ever had difficulty choosing a cocktail at a bar? How do you know which one you will like?">
+        </Card>
+        </motion.div>
 
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
+        <FlexBox dir="column">
+          <FlexBox color="#717ADD" fontFamily="Pompiere" margin="130px 25px 25px 25px" fontSize="40px">Let's connect!</FlexBox >
+          <FlexBox>
+          <Image margin="0px 25px 50px 25px" width="60px" src="/gmail.svg"></Image>
+          <Image margin="0px 25px 50px 25px" width="50px" src="/linkedin.svg"></Image>
+          <Image margin="0px 25px 50px 25px" width="50px" src="/instagram.svg"></Image>
+          </FlexBox>
+        </FlexBox>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+      </FlexBox>
     </>
   )
 }
