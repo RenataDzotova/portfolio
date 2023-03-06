@@ -32,7 +32,7 @@ export default function Home() {
           <Image src='/bird.svg' width="50px" zIndex='-200'></Image>
         </motion.div>
 
-        <motion.div initial={{position:'absolute', y: -500, x: -1500, rotate:30}} animate={{y: -200, x:1400, rotate:50}} transition={{duration:'6', ease:'linear', delay:7}}>
+        <motion.div initial={{position:'absolute', y: -500, x: -1500, rotate:30}} animate={{y: -200, x:1400, rotate:50}} transition={{duration:'6', ease:'linear', delay:6}}>
           <Image src='/bird2.svg' width="80px" zIndex='-200'></Image>
         </motion.div>
 

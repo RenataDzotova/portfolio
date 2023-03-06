@@ -26,13 +26,13 @@ export default function Home() {
 
         <NavBar></NavBar>
 
-        <motion.div initial={{position:'absolute', top:'0', left:"15vw"}} animate={{rotate: [-20, 20, -20]}} transition={{duration:'4', repeat: Infinity}}><Image src='/guys.svg' width="120px" position="absolute" top="-7vh" left="20%" opacity='50%' zIndex='-100'></Image></motion.div>
+        <motion.div initial={{position:'absolute', top:'0', left:"15vw"}} animate={{rotate: [-20, 20, -20]}} transition={{duration:'4', repeat: Infinity}}><Image src='/guys.svg' width="120px" position="absolute" top="-4vh" left="20%" opacity='50%' zIndex='-100'></Image></motion.div>
 
         <motion.div initial={{position:'absolute', y: -900, x: 1400, rotate:0}} animate={{y: -1200, x:-1500, rotate:30}} transition={{duration:'6', ease:'linear', delay:3}}>
           <Image src='/bird.svg' width="50px" zIndex='-200'></Image>
         </motion.div>
 
-        <motion.div initial={{position:'absolute', y: -500, x: -1500, rotate:30}} animate={{y: -200, x:1400, rotate:50}} transition={{duration:'6', ease:'linear', delay:7}}>
+        <motion.div initial={{position:'absolute', y: -500, x: -1500, rotate:30}} animate={{y: -200, x:1400, rotate:50}} transition={{duration:'6', ease:'linear', delay:6}}>
           <Image src='/bird2.svg' width="80px" zIndex='-200'></Image>
         </motion.div>
 
