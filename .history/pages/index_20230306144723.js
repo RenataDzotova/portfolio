@@ -36,12 +36,8 @@ export default function Home() {
           <Image src='/bird2.svg' width="80px" zIndex='-200'></Image>
         </motion.div>
 
-        <motion.div initial={{position:'absolute', y: -1150, x: -1400}} animate={{y: -1150, x:1400}} transition={{duration:'60', ease:'linear'}}>
-          <Image src='/cloudyy.svg' width="400px" zIndex='-300'></Image>
-        </motion.div>
-
-        <motion.div initial={{position:'absolute', y: -1150, x: -1400}} animate={{y: -1150, x:1400}} transition={{duration:'60', ease:'linear'}}>
-          <Image src='/cloudyy.svg' width="300px" zIndex='-300'></Image>
+        <motion.div initial={{position:'absolute', y: -1100, x: 1400, rotate:0}} animate={{y: -1100, x:-1500, rotate:30}} transition={{duration:'6', ease:'linear', delay:2}}>
+          <Image src='/cloud.svg' width="50px" zIndex='-200'></Image>
         </motion.div>
 
         <FlexBox className='landing' dir="column" height="100vh" width="100vw" zIndex='0'>

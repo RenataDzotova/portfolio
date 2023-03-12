@@ -26,31 +26,21 @@ export default function Home() {
 
         <NavBar></NavBar>
 
-        <motion.div initial={{position:'absolute', top:'0', left:"18vw"}} animate={{rotate: [-20, 20, -20]}} transition={{duration:'4', repeat: Infinity}}><Image src='/guys.svg' width="120px" position="absolute" top="-23vh" left="20%" opacity='50%' zIndex='-100'></Image></motion.div>
+        <motion.div initial={{position:'absolute', top:'0', left:"15vw"}} animate={{rotate: [-20, 20, -20]}} transition={{duration:'4', repeat: Infinity}}><Image src='/guys.svg' width="120px" position="absolute" top="-11vh" left="20%" opacity='50%' zIndex='-100'></Image></motion.div>
 
-        <motion.div initial={{position:'absolute', y: -900, x: 1400, rotate:0}} animate={{y: -1200, x:-1500, rotate:30}} transition={{duration:'6', ease:'linear', delay:2}}>
+        <motion.div initial={{position:'absolute', y: -900, x: 1400, rotate:0}} animate={{y: -1200, x:-1500, rotate:30}} transition={{duration:'6', ease:'linear', delay:3}}>
           <Image src='/bird.svg' width="50px" zIndex='-200'></Image>
         </motion.div>
 
-        <motion.div initial={{position:'absolute', y: -600, x: -1500, rotate:30}} animate={{y: -200, x:1400, rotate:50}} transition={{duration:'6', ease:'linear', delay:6}}>
+        <motion.div initial={{position:'absolute', y: -500, x: -1500, rotate:30}} animate={{y: -200, x:1400, rotate:50}} transition={{duration:'6', ease:'linear', delay:7}}>
           <Image src='/bird2.svg' width="80px" zIndex='-200'></Image>
         </motion.div>
 
-        <motion.div initial={{position:'absolute', y: -1150, x: -1400}} animate={{y: -1150, x:1400}} transition={{duration:'60', ease:'linear'}}>
-          <Image src='/cloudyy.svg' width="400px" zIndex='-300'></Image>
-        </motion.div>
-
-        <motion.div initial={{position:'absolute', y: -1150, x: -1400}} animate={{y: -1150, x:1400}} transition={{duration:'60', ease:'linear'}}>
-          <Image src='/cloudyy.svg' width="300px" zIndex='-300'></Image>
-        </motion.div>
-
         <FlexBox className='landing' dir="column" height="100vh" width="100vw" zIndex='0'>
-        <motion.div initial={{opacity:'0'}} animate={{opacity:1}} transition={{duration:'3'}}>
             <FlexBox dir="column" color="white" margin="25vh 0 0 0">
               <Text fontSize="80px" fontFamily="Pompiere" textAlign="center">Renata Dzotova</Text>
               <Text fontSize="36px" fontFamily="PT Sans Narrow" textAlign="center">UX/UI designer</Text>
             </FlexBox>
-        </motion.div>
 
             <FlexBox dir="column" color="white" fontSize="22px" margin="35vh 0 0 0" fontFamily="PT Sans" textAlign='center'>
               {/* <Text textAlign="center">A problem solver with design sensibility and sky-high standards.</Text> */}

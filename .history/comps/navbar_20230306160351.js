@@ -7,7 +7,7 @@ export default function NavBar({
     onKeyDown = ()=>{},
 })
 {
-  const [bgColor, setBgColor] = useState("rgba(113, 122, 221, 0)")
+  const [bgColor, setBgColor] = useState("rgba(113, 122, 221, 0.4)")
     
     useEffect(() => {
       const handleScroll = () => {

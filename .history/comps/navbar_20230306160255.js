@@ -7,7 +7,7 @@ export default function NavBar({
     onKeyDown = ()=>{},
 })
 {
-  const [bgColor, setBgColor] = useState("rgba(113, 122, 221, 0)")
+  const [bgColor, setBgColor] = useState("rgba(113, 122, 221, 0.4)")
     
     useEffect(() => {
       const handleScroll = () => {
@@ -15,7 +15,7 @@ export default function NavBar({
           if (scrollPos > 0) {
               setBgColor("rgba(113, 122, 221, 1)");
           } else {
-              setBgColor("rgba(113, 122, 221, 0)");
+              setBgColor("rgba(113, 122, 221, 0.4)");
           }
       };
       window.addEventListener("scroll", handleScroll);

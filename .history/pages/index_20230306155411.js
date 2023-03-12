@@ -7,12 +7,33 @@ import { FlexBox, Image, Text } from '@/styles/globals'
 import Card from '@/comps/card'
 import { motion, useAnimation } from 'framer-motion'; 
 import Typewriter from 'typewriter-effect';
+import { useState, useEffect } from 'react';
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 
 export default function Home() {
+
+  const [isNavBarVisible, setIsNavBarVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.pageYOffset;
+      if (scrollPosition >= 100) {
+        setIsNavBarVisible(true);
+      } else {
+        setIsNavBarVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -24,7 +45,7 @@ export default function Home() {
 
       <FlexBox className='mainCont' dir="column" linearGradient="linear-gradient(180deg, #717ADD 0%, rgba(113, 122, 221, 0.13) 100%)" zIndex="-100">
 
-        <NavBar></NavBar>
+      {isNavBarVisible && <NavBar />}
 
         <motion.div initial={{position:'absolute', top:'0', left:"18vw"}} animate={{rotate: [-20, 20, -20]}} transition={{duration:'4', repeat: Infinity}}><Image src='/guys.svg' width="120px" position="absolute" top="-23vh" left="20%" opacity='50%' zIndex='-100'></Image></motion.div>
 
@@ -36,12 +57,8 @@ export default function Home() {
           <Image src='/bird2.svg' width="80px" zIndex='-200'></Image>
         </motion.div>
 
-        <motion.div initial={{position:'absolute', y: -1150, x: -1400}} animate={{y: -1150, x:1400}} transition={{duration:'60', ease:'linear'}}>
-          <Image src='/cloudyy.svg' width="400px" zIndex='-300'></Image>
-        </motion.div>
-
-        <motion.div initial={{position:'absolute', y: -1150, x: -1400}} animate={{y: -1150, x:1400}} transition={{duration:'60', ease:'linear'}}>
-          <Image src='/cloudyy.svg' width="300px" zIndex='-300'></Image>
+        <motion.div initial={{position:'absolute', y: -1100, x: -1500}} animate={{y: -1100, x:1400}} transition={{duration:'60', ease:'linear'}}>
+          <Image src='/cloudyy.svg' width="400px" zIndex='-200'></Image>
         </motion.div>
 
         <FlexBox className='landing' dir="column" height="100vh" width="100vw" zIndex='0'>
