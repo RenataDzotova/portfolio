@@ -25,7 +25,7 @@ export default function NavBar({
   }, []);
 
     return(
-        <FlexBox fontFamily="PT Sans Narrow" position="fixed" alignItems="end" bgColor={bgColor} top="10px" width="90vw" height="60px" justifyContent="space-between" padding="10px 50px 10px 50px" zIndex="2" borderRadius='10px'>
+        <FlexBox fontFamily="PT Sans Narrow" position="fixed" alignItems="end" bgColor={bgColor} top="0px" width="90vw" height="70px" justifyContent="space-between" padding="10px 50px 10px 50px" zIndex="2" borderRadius='0 0 10px 10px'>
           <FlexBox width="50%" justifyContent="flex-start">
           <Image className="logoMobile" src="/logo.svg" width="30px"></Image>
           </FlexBox>
