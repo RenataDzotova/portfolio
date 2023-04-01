@@ -30,10 +30,14 @@ export default function NavBar({
           <Image className="logoMobile" src="/logo.svg" width="30px"></Image>
           </FlexBox>
 
-          <FlexBox justifyContent="space-between" width="420px" color="white" fontSize="28px">
-            <FlexBox margin="0 15px 0 0">About</FlexBox>
+          <FlexBox justifyContent="space-between" width="200px" color="white" fontSize="28px">
+            {/* <FlexBox margin="0 15px 0 0">About</FlexBox>
             <FlexBox>Creative</FlexBox>
-            <FlexBox>Front-end</FlexBox>
+            <FlexBox>Front-end</FlexBox> */}
+
+          <FlexBox textDecoration="underline">UX/UI</FlexBox>
+          <FlexBox>Creative</FlexBox>
+          
           </FlexBox>
         </FlexBox>
     )

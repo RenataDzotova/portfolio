@@ -41,6 +41,10 @@ export const FlexBox = styled.div`
     overflow-x: ${props=>props.overflowX};
     z-index: ${props=>props.zIndex};
     text-align:${props=>props.textAlign};
+    :hover {
+    text-decoration: ${props => props.textDecoration || ""};
+    text-decoration-thickness: ${props => props.textDecorThick || "2px"};
+    }
 `
 
 

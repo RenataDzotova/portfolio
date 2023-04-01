@@ -106,9 +106,9 @@ export default function Home() {
         <FlexBox dir="column">
           <FlexBox color="#717ADD" fontFamily="Pompiere" margin="130px 25px 25px 25px" fontSize="40px">Let's connect!</FlexBox >
           <FlexBox>
-          <Image margin="0px 25px 50px 25px" width="60px" src="/gmail.svg"></Image>
-          <Image margin="0px 25px 50px 25px" width="50px" src="/linkedin.svg"></Image>
-          <Image margin="0px 25px 50px 25px" width="50px" src="/instagram.svg"></Image>
+          <Image margin="0px 25px 50px 25px" width="35px" src="/gmail.svg"></Image>
+          <Image margin="0px 25px 50px 25px" width="30px" src="/linkedin.svg"></Image>
+          <Image margin="0px 25px 50px 25px" width="30px" src="/instagram.svg"></Image>
           </FlexBox>
         </FlexBox>
 
