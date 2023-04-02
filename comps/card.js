@@ -6,10 +6,11 @@ export default function Card({
     img='src',
     name='name',
     role="role",
-    description='description'
+    description='description',
+    onClick = () => {}
 }){
     return(
-        <FlexBox margin="35px" width="725px" displayM='flex'dirM="column" widthM="330px" height="fit-content" fontFamily="PT Sans" bgColor="#F2F2F2" color="#121212" boxShadow="4px 4px 15px 3px rgba(0, 0, 0, 0.15)" borderRadius="15px">
+        <FlexBox margin="35px" width="725px" displayM='flex'dirM="column" widthM="330px" height="fit-content" fontFamily="PT Sans" bgColor="#F2F2F2" color="#121212" boxShadow="4px 4px 15px 3px rgba(0, 0, 0, 0.15)" borderRadius="15px" onClick={onClick}>
           <FlexBox bgImage={img} width="550px" widthM='330px' height="305px" borderRadius="15px 0 0 15px" borderRadiusM='15px 15px 0 0'></FlexBox>
           <FlexBox fontFamily="PT Sans" dir="column" alignItems="start" justifyContent="space-around" width="100%" padding="20px 35px" height="305px">
             <Text fontSize="37px" color='#222222'>{name}</Text>

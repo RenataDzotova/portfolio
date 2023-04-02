@@ -1,5 +1,6 @@
 import { FlexBox, Image } from "@/styles/globals"
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router'
 
 export default function NavBar({
     value="",
@@ -8,6 +9,7 @@ export default function NavBar({
 })
 {
   const [bgColor, setBgColor] = useState("rgba(113, 122, 221, 0)")
+  const router = useRouter()
     
     useEffect(() => {
       const handleScroll = () => {
@@ -27,16 +29,16 @@ export default function NavBar({
     return(
         <FlexBox fontFamily="PT Sans Narrow" position="fixed" alignItems="end" bgColor={bgColor} top="0px" width="90vw" height="70px" justifyContent="space-between" padding="10px 50px 10px 50px" paddingM='10px' zIndex="2" borderRadius='0 0 15px 15px'>
           <FlexBox width="50%" justifyContent="flex-start">
-          <Image className="logoMobile" src="/logo.svg" width="30px"></Image>
-          </FlexBox>
+          <Image className="logoMobile" src="/logo.svg" width="30px" onClick={()=>router.push("https://renatadzotova.vercel.app/")}></Image >
+          </FlexBox> 
 
           <FlexBox justifyContent="space-between" width="200px" color="white" fontSize="28px">
             {/* <FlexBox margin="0 15px 0 0">About</FlexBox>
             <FlexBox>Creative</FlexBox>
             <FlexBox>Front-end</FlexBox> */}
 
-          <FlexBox textDecoration="underline">UX/UI</FlexBox>
-          <FlexBox textDecoration="underline">Creative</FlexBox>
+          <FlexBox textDecoration="underline" onClick={()=>router.push("https://renatadzotova.vercel.app/")}>UX/UI</FlexBox>
+          <FlexBox textDecoration="underline" onClick={()=>router.push("http://portfolio.renatadzotova.ca/creative/")}>Creative</FlexBox>
           
           </FlexBox>
         </FlexBox>

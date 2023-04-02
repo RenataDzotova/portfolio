@@ -10,12 +10,15 @@ import Typewriter from 'typewriter-effect';
 import { useState, useEffect } from 'react';
 import LoadingAnimation from '@/public/airplane.json'
 import Lottie from 'lottie-react'
+import { useRouter } from 'next/router'
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 
 export default function Home() {
+
+  const router = useRouter()
 
   const [show, setShow] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -37,7 +40,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <FlexBox className='mainCont' dir="column" linearGradient="linear-gradient(180deg,#717ADD 0%,rgb(113 122 221 / 0%) 100%)" zIndex="-100">
+      <FlexBox className='mainCont' dir="column" linearGradient="linear-gradient(180deg,#717ADD 0%,rgb(255 247 247) 75%)" zIndex="-100">
 
         <NavBar></NavBar>
 
@@ -114,7 +117,8 @@ export default function Home() {
           img="/rooty.jpg"
           name="Rooty"
           role="UI/UX design & Font-end Development"
-          description="A freelance mobile marketplace allowing BCIT students to offer their interdisciplinary skillset to each other.">
+          description="A freelance mobile marketplace allowing BCIT students to offer their interdisciplinary skillset to each other."
+          onClick={()=>router.push("http://portfolio.renatadzotova.ca/Rooty/")}>
           </Card>
         </motion.div>
 
@@ -123,7 +127,8 @@ export default function Home() {
           img="/westp.jpg"
           name="West Point Hotel"
           role="UI/UX design"
-          description="A website for an imaginary luxury Caribbean resort West Point Hotel.">
+          description="A website for an imaginary luxury Caribbean resort West Point Hotel."
+          onClick={()=>router.push("http://portfolio.renatadzotova.ca/west-point-hotel-2/")}>
           </Card>
         </motion.div>
 
@@ -174,10 +179,7 @@ export default function Home() {
             <Image src='/persona.png' width='80%' margin='-60px 0 100px 0'></Image>
           </motion.div>
           }
-        </FlexBox>
-
-        {/* footer */}
-        <FlexBox dir="column" width='100%'>
+          <FlexBox dir="column" width='100%'>
           <FlexBox color="#717ADD" fontFamily="Pompiere" margin="130px 25px 25px 25px" fontSize="40px">Let's connect!</FlexBox >
           <FlexBox>
           <Image margin="0px 25px 50px 25px" width="34px" src="/gmail.svg"></Image>
@@ -185,6 +187,10 @@ export default function Home() {
           <Image margin="0px 25px 50px 25px" width="30px" src="/instagram.svg"></Image>
           </FlexBox>
         </FlexBox>
+        </FlexBox>
+
+        {/* footer */}
+        
 
       </FlexBox>
     </>
