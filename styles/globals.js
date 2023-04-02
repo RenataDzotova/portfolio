@@ -44,7 +44,21 @@ export const FlexBox = styled.div`
     :hover {
     text-decoration: ${props => props.textDecoration || ""};
     text-decoration-thickness: ${props => props.textDecorThick || "2px"};
+    background-color: ${props => props.hoverBgColor || ""};
     }
+    @media (max-width: 730px) {
+        height:${props=>props.heightM || props.height};
+        margin: ${props=>props.marginM || props.margin};
+        width: ${props=>props.widthM || props.width};
+        padding: ${props=>props.paddingM || props.padding};
+        flex-direction: ${props=>props.dirM || props.dir};
+        display: ${props=>props.displayM || props.display};
+        justify-content: ${props=>props.justifyContentM || props.justifyContent};
+        align-items: ${props=>props.alignItemsM || props.alignItems};
+        font-size: ${props=>props.fontSizeM || props.fontSize};
+        border-radius: ${props=>props.borderRadiusM || props.borderRadius};
+        border: ${props=>props.borderM || props.border};
+      }
 `
 
 
@@ -66,6 +80,14 @@ export const Image = styled.img`
     margin: ${props=>props.margin}
     z-index: ${props=>props.zIndex}
     opacity: ${props=>props.opacity}
+    @media (max-width: 700px) {
+        height:${props=>props.heightM || props.height};
+        margin: ${props=>props.marginM || props.margin};
+        width: ${props=>props.widthM || props.width};
+        padding: ${props=>props.paddingM || props.padding};
+        flex-direction: ${props=>props.dirM || props.dir};
+        border-radius: ${props=>props.borderRadiusM || props.borderRadius};
+    }
 `
 
 
@@ -78,8 +100,16 @@ margin: ${props=>props.margin};
 width: ${props=>props.width};
 padding: ${props=>props.padding};
 width:${props=>props.width};
+max-width:${props=>props.maxWidth};
 text-align:${props=>props.textAlign};
 line-height:${props=>props.lineHeight};
+letter-spacing:${props=>props.letterSpacing};
+@media (max-width: 700px) {
+    font-size: ${props=>props.fontSizeM || props.fontSize};
+    margin: ${props=>props.marginM || props.margin};
+    width: ${props=>props.widthM || props.width};
+    padding: ${props=>props.paddingM || props.padding};
+  }
 `
 
 
