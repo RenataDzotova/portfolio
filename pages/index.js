@@ -40,7 +40,7 @@ export default function Home() {
         <link rel="icon" href="/logogray.svg" />
       </Head>
 
-      <FlexBox className='mainCont' dir="column" linearGradient="linear-gradient(180deg,#717ADD 0%,rgb(255 247 247) 75%)" zIndex="-100">
+      <FlexBox className='mainCont' overflowY='hidden' dir="column" linearGradient="linear-gradient(180deg,#717ADD 0%,rgb(255 247 247) 75%)" zIndex="-100">
 
         <NavBar></NavBar>
 
@@ -142,9 +142,9 @@ export default function Home() {
         </motion.div>
 
         {/* me */}
-        <FlexBox margin='100px 0 0 0' bgImage="/back.png" width="100%" height='fit-content' bgPosition='center top' dir='column'>
+        <FlexBox margin='100px 0 0 0' bgImage="/back.png" width="100%" height='fit-content' bgPosition='center top' dir='column' dirM='column'>
           {/* <Image src="/back.png" width="100%"></Image> */}
-          <FlexBox margin="150px 0 0 0">
+          <FlexBox margin="150px 0 0 0" displayM='flex' dirM="column">
             <Image src="/me.png" width="450px"></Image>
 
             <FlexBox dir="column" margin="0 0 0 50px" height='570px' justifyContent='top' alignItems='left'>
